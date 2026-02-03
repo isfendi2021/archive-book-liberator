@@ -1,0 +1,36 @@
+{
+  "name": "archive-book-liberator",
+  "version": "1.0.0",
+  "description": "Extract and convert 'Borrow Only' books from Internet Archive into local PDFs, bypassing timeout errors and download limitations.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "archive.org",
+    "book-downloader",
+    "pdf-converter",
+    "internet-archive",
+    "ebook",
+    "web-scraping",
+    "canvas",
+    "automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuriTheCoder/archive-book-liberator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YuriTheCoder/archive-book-liberator/issues"
+  },
+  "homepage": "https://github.com/YuriTheCoder/archive-book-liberator#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "images-to-pdf": "^1.0.0"
+  },
+  "author": "YuriTheCoder",
+  "contributors": []
+}

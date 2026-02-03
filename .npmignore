@@ -1,0 +1,13 @@
+# Don't include these in npm package
+images/
+*.pdf
+.vscode/
+.idea/
+.github/
+*.log
+
+# But DO include documentation
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md
